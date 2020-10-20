@@ -5,9 +5,9 @@ import psycopg2
 import pandas as pd
 from pandas.testing import assert_frame_equal
 
-from sparkify_redshift_db.constants import CONFIG_PATH_DWH_CURRENT, DIR_DATA_TEST, logging
-from sparkify_redshift_db.scripts import create_tables
-from sparkify_redshift_db.tests import utils_tests
+from redshift_etl_template.constants import CONFIG_PATH_DWH_CURRENT, DIR_DATA_TEST, logging
+from redshift_etl_template.scripts import create_tables
+from redshift_etl_template.tests import utils_tests
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)

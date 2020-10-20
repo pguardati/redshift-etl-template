@@ -3,30 +3,30 @@ import psycopg2
 import argparse
 import sys
 
-from sparkify_redshift_db.src.sql_queries import copy_table_queries, insert_table_queries
-from sparkify_redshift_db.constants import CONFIG_PATH_DWH_CURRENT, logging
+from redshift_etl_template.src.sql_queries import create_table_queries, drop_table_queries
+from redshift_etl_template.constants import CONFIG_PATH_DWH_CURRENT, logging
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 
-def load_staging_tables(cur, conn):
-    logger.info("Copying json files from s3 to redshift..")
-    for query in copy_table_queries:
+def drop_tables(cur, conn):
+    logger.info("Dropping existing tables...")
+    for query in drop_table_queries:
         cur.execute(query)
         conn.commit()
 
 
-def insert_tables(cur, conn):
-    logger.info("Processing staged data to fill analytics tables..")
-    for query in insert_table_queries:
+def create_tables(cur, conn):
+    logger.info("Creating empty tables...")
+    for query in create_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def parse_input(args):
-    parser = argparse.ArgumentParser(description="Script to load data from s3 into staging tables,\
-                                                 and from them, into the analytics tables")
+    parser = argparse.ArgumentParser(description="Script to create staging and analytics\
+                                                 tables inside the data warehouse server")
     parser.add_argument("--path_config_current",
                         help="path of the configuration file of launched infrastructure",
                         default=CONFIG_PATH_DWH_CURRENT)
@@ -44,10 +44,9 @@ def main(args=None):
     conn = psycopg2.connect("host={} dbname={} user={} password={} port={}".format(*config['CLUSTER'].values()))
     cur = conn.cursor()
 
-    load_staging_tables(cur, conn)
-    insert_tables(cur, conn)
+    drop_tables(cur, conn)
+    create_tables(cur, conn)
 
-    logger.info("ETL completed, disconnecting from the database..")
     conn.close()
 
 

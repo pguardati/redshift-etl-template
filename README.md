@@ -40,19 +40,19 @@ export PYTHONPATH
 ```
 e.g.
 ```
-PYTHONPATH=~/PycharmProjects/SparkifyRedshiftDB:$PYTHONPATH 
+PYTHONPATH=~/PycharmProjects/redshift-etl-template:$PYTHONPATH 
 export PYTHONPATH
 ```
 
 To install and activate the environment:
 ```
-conda env create -f environment.yml
-conda activate sparkify_redshift_db 
+conda env create -f redshift_etl_template/environment.yml
+conda activate redshift_etl_template 
 ```
 
 To use this software an aws account is needed.  
 Also, a configuration file named *dwh_launch.cfg* 
-has to be created under *SparkifyRedshiftDB/credentials*.  
+has to be created under *redshift-etl-template/credentials*.  
 it has to contain the aws credentials and the infrastructure configuration,
 with the following format:
 ```
@@ -80,33 +80,33 @@ DWH_SECURITY_GROUP_ID=sg-292b4502
 ## Usage
 To create the infrastructure:
 ```
-python sparkify_redshift_db/scripts/create_infrastructure.py
+python redshift_etl_template/scripts/create_infrastructure.py
 ```
 
 To drop the current tables and create new empty ones:
 ```
-python sparkify_redshift_db/scripts/create_tables.py
+python redshift_etl_template/scripts/create_tables.py
 ```
 
 To run the etl pipeline on the full data from s3
 ```
-python sparkify_redshift_db/scripts/etl.py
+python redshift_etl_template/scripts/etl.py
 ```
 
 To check the content of the database, run:
 ```
-python sparkify_redshift_db/scripts/check_database.py
+python redshift_etl_template/scripts/check_db.py
 ```
 
 ## Tests
 To run all unittests:
 ```
-python -m unittest discover sparkify_redshift_db/tests
+python -m unittest discover redshift_etl_template/tests
 ```
 
 ## IMPORTANT NOTE
 when the task is finished,  
 remember to delete the aws infrastructure with:
 ```
-python sparkify_redshift_db/scripts/delete_infrastructure.py
+python redshift_etl_template/scripts/delete_infrastructure.py
 ```

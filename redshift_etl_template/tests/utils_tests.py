@@ -2,8 +2,8 @@ import configparser
 import numpy as np
 import pandas as pd
 
-from sparkify_redshift_db.src import sql_queries, utils
-from sparkify_redshift_db.constants import logger, CONFIG_PATH_DWH_CURRENT
+from redshift_etl_template.src import sql_queries, utils
+from redshift_etl_template.constants import logger, CONFIG_PATH_DWH_CURRENT
 
 # CONFIG
 config = configparser.ConfigParser()

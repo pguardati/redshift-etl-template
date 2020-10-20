@@ -1,8 +1,8 @@
 import argparse
 import sys
 
-from sparkify_redshift_db.src.infrastructure import CloudInfrastructureConstructor
-from sparkify_redshift_db.constants import CONFIG_PATH_DWH_LAUNCH, CONFIG_PATH_DWH_CURRENT
+from redshift_etl_template.src.infrastructure import CloudInfrastructureConstructor
+from redshift_etl_template.constants import CONFIG_PATH_DWH_LAUNCH, CONFIG_PATH_DWH_CURRENT
 
 
 def parse_input(args):
