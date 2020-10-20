@@ -1,0 +1,5 @@
+artist_id,artist_latitude,artist_location,artist_longitude,artist_name,duration,num_songs,song_id,title,year
+# 1 full entry to define data type
+ARJNIUY12298900C91,37.77916,"San Francisco, CA",-122.42005,Adelitas Way,213.9424,1,SOALFFE12AF72AA5BA,Scream,2009
+
+

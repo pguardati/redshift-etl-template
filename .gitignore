@@ -1,0 +1,9 @@
+*.xml
+*.iml
+.ipynb_checkpoints
+pycache/
+/.idea/
+
+/credentials
+/data
+/notebooks

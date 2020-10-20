@@ -1,0 +1,18 @@
+artist,auth,firstName,gender,itemInSession,lastName,length,level,location,method,page,registration,sessionId,song,status,ts,userAgent,userId
+# 1 full entry to define data type
+Adelitas Way,Logged In,NameTest,M,0,SurnameTest,160.00,free,"San Francisco-Oakland-Hayward, CA",PUT,NextSong,1540919166796.0,38,Scream,200,1541105830796,"""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36""",0
+# 2 full entries on fields of interest
+,,Walter,M,,Frye,,free,,,NextSong,,,,,1541105830796,,1
+,,Walter,M,,White,,free,,,NextSong,,,,,1541115830796,,2
+# 1 duplicate row
+,,Walter,M,,White,,free,,,NextSong,,,,,1541115830796,,2
+# 5 entries with 1 null column each
+,,,M,,Frye,,paid,,,NextSong,,,,,1541125830796,,3
+,,Walter,M,,,,free,,,NextSong,,,,,1541145830796,,4
+,,Walter,,,Frye,,free,,,NextSong,,,,,1541133330796,,5
+,,Walter,M,,Frye,,,,,NextSong,,,,,1541155830796,,100
+,,Walter,M,,Frye,,free,,,NextSong,,,,,1541165830796,,
+# 1 entry in the wrong page
+,,Homer,M,,Simpson,,paid,,,Moe,,,,,1541175830796,,200
+# 1 entry with same id and different level
+#,,Walter,M,,Frye,,paid,,,NextSong,,,,,1541175830796,,1

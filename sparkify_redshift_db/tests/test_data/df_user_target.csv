@@ -1,0 +1,8 @@
+user_id,first_name,last_name,gender,level
+0,NameTest,SurnameTest,M,free
+1,Walter,Frye,M,free
+#1,Walter,Frye,M,paid
+2,Walter,White,M,free
+3,,Frye,M,paid
+4,Walter,,M,free
+5,Walter,Frye,,free

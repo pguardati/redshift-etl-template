@@ -1,0 +1,15 @@
+artist_id,artist_latitude,artist_location,artist_longitude,artist_name,duration,num_songs,song_id,title,year
+# 1 full entry to define data type
+ARJNIUY12298900C91,37.77916,"San Francisco, CA",-122.42005,Adelitas Way,213.9424,1,SOBLFFE12AF72AA5BA,Scream,2009
+# 2 full entries on fields of interest
+BR73AIO1187B9AD57B,20.0,Pisa,30.0,singer1,,,,,
+CRR3AIO1187B9AD57B,20.0,Madrid,30.0,singer2,,,,,
+# 1 duplicate row
+CRR3AIO1187B9AD57B,20.0,Madrid,30.0,singer2,,,,,
+# 5 entries with 1 null column each
+DR73AIO1187B9AD57B,20.0,Pisa,30.0,singer1,,,,,
+,20.0,Pisa,30.0,singer1,,,,,
+FR73AIO1187B9AD57B,,Pisa,30.0,singer1,,,,,
+ER73AIO1187B9AD57B,20.0,,30.0,singer1,,,,,
+GR73AIO1187B9AD57B,20.0,Pisa,,singer1,,,,,
+HR73AIO1187B9AD57B,20.0,Pisa,30.0,,,,,,

@@ -1,0 +1,2 @@
+songplay_id,start_time,user_id,level,song_id,artist_id,session_id,location,user_agent
+1,"2018-11-01 20:57:10",0,free,SOALFFE12AF72AA5BA,ARJNIUY12298900C91,38,"San Francisco-Oakland-Hayward, CA","""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36"""
